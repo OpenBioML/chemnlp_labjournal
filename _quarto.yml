@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "chemnlp"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    author: "ChemNLP project"
+    comments:
+      utterances:
+        repo: openbioml/chemnlp-blog
+    toc: true
+    toc-location: "left"
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    mainfont: "Lato"
+    monofont: "Fira Mono"
+    footnotes-hover: true
+    fontsize: 1em
+    theme: my-litera.scss
+    css: styles.css

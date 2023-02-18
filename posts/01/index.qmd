@@ -1,0 +1,70 @@
+---
+title: "Welcome and background"
+author: "Kevin M Jablonka, Michael Piechler, Andrew White"
+date: "2023-02-15"
+categories: [news]
+bibliography: references.bib
+---
+
+This is the first post of the ChemNLP project under the umbrella of the [OpenBioML collective research laboratory](https://openbioml.org/#mission).
+
+Our aim is to (1) create a massive chemistry dataset and (2) train a large language model (LLM) on this dataset for downstream applications that include 
+
+- prediction of properties of materials 
+- conditional generation of molecules 
+- information extraction
+
+All the outputs will be open source and freely accessible. Also all the work happens collaboratively, organized via [Discord](https://discord.gg/GgDBFP8ZEt) and [GitHub](https://github.com/OpenBioML/chemnlp).
+
+
+## Background
+
+### Machine learning in chemistry 
+
+Chemistry is probably one of the most exciting applications for machine learning. 
+Chemistry gives us the tools to create drugs, chemistry can also help to fight climate change. [@Yao_2022; @Tabor_2018]
+
+However, chemists are also spoiled for choice. [@Walsh_2015] There are too many things chemists could try and many experiments are costly (or even involve experiments).
+Any tool we could use to speed up the design of chemical compounds would hence be of tremendous value.
+
+Interestingly, chemistry also creates a lot of data - but most of the data is currently unused (or hidden in journal articles or lab notebooks). [@Jablonka_2022]
+
+Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations such as SMILES and SELFIES.  [@Krenn_2022]
+
+Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representation, or to even directly create molecules with desired properties. 
+
+### LLMs for chemistry
+
+Schwaller, MolT5, the PubChem article 
+
+
+#### Using models from the GPT-3 family
+[@Hocky_2022]
+
+[@Jablonka_2023]
+
+## The ChemNLP project
+
+Inspired by the transformational potential of large language model we aim to create a massive chemistry dataset to then train a foundational model focussed on applications in chemistry. 
+
+
+## Getting involved
+
+### Join the discord community and sign up 
+
+The first step to get involved with the community is to join our [Discord server](https://discord.gg/GgDBFP8ZEt).
+
+### Comment on the proposal 
+
+If you want to get involved in shaping the project, you can comment on the [proposal draft](https://docs.google.com/document/d/1C44EKSJRojm39P2CaxnEq-0FGwDRaknKxJ8lZI6xr5M/edit?usp=sharing).
+
+### Select an issue 
+
+If you want to get your hands dirty with collecting and clearning code or writing pipelines, you can find a list of [open issues on GitHub](https://github.com/OpenBioML/chemnlp). Simply comment on the issue you would like to work. If you would like to work on something else, simple create an issue such that we can keep track of all the progress.
+
+In particular, we are currently collecting open source datasets. If you know some datasets, you can add them to our [Awesome List](https://github.com/kjappelbaum/awesome-chemistry-datasets). (Or feel free to improve existing entries.)
+
+## References
+
+::: {#refs}
+:::
