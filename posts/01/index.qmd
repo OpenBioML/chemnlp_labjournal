@@ -29,19 +29,25 @@ Any tool we could use to speed up the design of chemical compounds would hence b
 
 Interestingly, chemistry also creates a lot of data - but most of the data is currently unused (or hidden in journal articles or lab notebooks). [@Jablonka_2022]
 
-Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations such as SMILES and SELFIES.  [@Krenn_2022]
+Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations ("linearizations" of the molecule graph) such as SMILES and SELFIES.  [@Krenn_2022]
 
-Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representation, or to even directly create molecules with desired properties. 
+Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representations, [@molt5] or to even directly create molecules with desired properties. 
 
 ### LLMs for chemistry
 
-Schwaller, MolT5, the PubChem article 
+[@Hu_2023]
 
+Schwaller, MolT5, the PubChem article 
+Galactica
 
 #### Using models from the GPT-3 family
 [@Hocky_2022]
 
 [@Jablonka_2023]
+
+[@Frey_2022]
+
+[@dunn2022structured]
 
 ## The ChemNLP project
 
@@ -52,7 +58,8 @@ Inspired by the transformational potential of large language model we aim to cre
 
 ### Join the discord community and sign up 
 
-The first step to get involved with the community is to join our [Discord server](https://discord.gg/GgDBFP8ZEt).
+The first step to get involved with the community is to join our [Discord server](https://discord.gg/GgDBFP8ZEt), in the ChemNLP channel, we discuss the project. 
+If you want to contribute, you can also sign up on [this Google Sheet]().
 
 ### Comment on the proposal 
 
