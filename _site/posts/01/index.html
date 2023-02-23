@@ -171,6 +171,7 @@ div.csl-indent {
   <li><a href="#comment-on-the-proposal" id="toc-comment-on-the-proposal" class="nav-link" data-scroll-target="#comment-on-the-proposal">Comment on the proposal</a></li>
   <li><a href="#select-an-issue" id="toc-select-an-issue" class="nav-link" data-scroll-target="#select-an-issue">Select an issue</a></li>
   </ul></li>
+  <li><a href="#progress-so-far" id="toc-progress-so-far" class="nav-link" data-scroll-target="#progress-so-far">Progress so far</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -199,16 +200,19 @@ div.csl-indent {
 <p>Chemistry is probably one of the most exciting applications for machine learning. Chemistry gives us the tools to create drugs, chemistry can also help to fight climate change. <span class="citation" data-cites="Yao_2022 Tabor_2018">(<a href="#ref-Yao_2022" role="doc-biblioref">Yao et al. 2022</a>; <a href="#ref-Tabor_2018" role="doc-biblioref">Tabor et al. 2018</a>)</span></p>
 <p>However, chemists are also spoiled for choice. <span class="citation" data-cites="Walsh_2015">(<a href="#ref-Walsh_2015" role="doc-biblioref">Walsh 2015</a>)</span> There are too many things chemists could try and many experiments are costly (or even involve experiments). Any tool we could use to speed up the design of chemical compounds would hence be of tremendous value.</p>
 <p>Interestingly, chemistry also creates a lot of data - but most of the data is currently unused (or hidden in journal articles or lab notebooks). <span class="citation" data-cites="Jablonka_2022">(<a href="#ref-Jablonka_2022" role="doc-biblioref">Jablonka, Patiny, and Smit 2022</a>)</span></p>
-<p>Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations such as SMILES and SELFIES. <span class="citation" data-cites="Krenn_2022">(<a href="#ref-Krenn_2022" role="doc-biblioref">Krenn et al. 2022</a>)</span></p>
-<p>Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representation, or to even directly create molecules with desired properties.</p>
+<p>Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations (“linearizations” of the molecule graph) such as SMILES and SELFIES. <span class="citation" data-cites="Krenn_2022">(<a href="#ref-Krenn_2022" role="doc-biblioref">Krenn et al. 2022</a>)</span></p>
+<p>Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representations, <span class="citation" data-cites="molt5">(<a href="#ref-molt5" role="doc-biblioref">Edwards et al. 2022</a>)</span> or to even directly create molecules with desired properties.</p>
 </section>
 <section id="llms-for-chemistry" class="level3">
 <h3 class="anchored" data-anchor-id="llms-for-chemistry">LLMs for chemistry</h3>
-<p>Schwaller, MolT5, the PubChem article</p>
+<p>Large language models <span class="citation" data-cites="Hu_2023">(<a href="#ref-Hu_2023" role="doc-biblioref">Hu and Buehler 2023</a>)</span></p>
+<p>Schwaller, MolT5, the PubChem article Galactica</p>
 <section id="using-models-from-the-gpt-3-family" class="level4">
 <h4 class="anchored" data-anchor-id="using-models-from-the-gpt-3-family">Using models from the GPT-3 family</h4>
 <p><span class="citation" data-cites="Hocky_2022">(<a href="#ref-Hocky_2022" role="doc-biblioref">Hocky and White 2022</a>)</span></p>
 <p><span class="citation" data-cites="Jablonka_2023">(<a href="#ref-Jablonka_2023" role="doc-biblioref">Jablonka et al. 2023</a>)</span></p>
+<p><span class="citation" data-cites="Frey_2022">(<a href="#ref-Frey_2022" role="doc-biblioref">Frey et al. 2022</a>)</span></p>
+<p><span class="citation" data-cites="dunn2022structured">(<a href="#ref-dunn2022structured" role="doc-biblioref">Dunn et al. 2022</a>)</span></p>
 </section>
 </section>
 </section>
@@ -220,7 +224,7 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="getting-involved">Getting involved</h2>
 <section id="join-the-discord-community-and-sign-up" class="level3">
 <h3 class="anchored" data-anchor-id="join-the-discord-community-and-sign-up">Join the discord community and sign up</h3>
-<p>The first step to get involved with the community is to join our <a href="https://discord.gg/GgDBFP8ZEt">Discord server</a>.</p>
+<p>The first step to get involved with the community is to join our <a href="https://discord.gg/GgDBFP8ZEt">Discord server</a>, in the ChemNLP channel, we discuss the project. If you want to contribute, you can also sign up on <a href="https://docs.google.com/spreadsheets/d/11x7O__rUuntN3F2CuR7Ksd_4UdL7CPyEDm7v_Q0H_B0/edit?usp=sharing">this Google Sheet</a>.</p>
 </section>
 <section id="comment-on-the-proposal" class="level3">
 <h3 class="anchored" data-anchor-id="comment-on-the-proposal">Comment on the proposal</h3>
@@ -230,13 +234,34 @@ div.csl-indent {
 <h3 class="anchored" data-anchor-id="select-an-issue">Select an issue</h3>
 <p>If you want to get your hands dirty with collecting and clearning code or writing pipelines, you can find a list of <a href="https://github.com/OpenBioML/chemnlp">open issues on GitHub</a>. Simply comment on the issue you would like to work. If you would like to work on something else, simple create an issue such that we can keep track of all the progress.</p>
 <p>In particular, we are currently collecting open source datasets. If you know some datasets, you can add them to our <a href="https://github.com/kjappelbaum/awesome-chemistry-datasets">Awesome List</a>. (Or feel free to improve existing entries.)</p>
+<p>For more details, check the contribution guide.</p>
 </section>
+</section>
+<section id="progress-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="progress-so-far">Progress so far</h2>
+<p>Already before our first meeting we made some progress:</p>
+<ul>
+<li>we started curating chemistry datasets in our <a href="https://github.com/kjappelbaum/awesome-chemistry-datasets">Awesome List</a></li>
+<li>we compiled a <a href="https://discord.com/channels/@me/1074955590608113706/1078243138809892915">dataset from ChemRxiv</a> (thanks to <span class="citation" data-cites="marianna13">(<a href="#ref-marianna13" role="doc-biblioref"><strong>marianna13?</strong></a>)</span>)</li>
+</ul>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-dunn2022structured" class="csl-entry" role="doc-biblioentry">
+Dunn, Alexander, John Dagdelen, Nicholas Walker, Sanghoon Lee, Andrew S. Rosen, Gerbrand Ceder, Kristin Persson, and Anubhav Jain. 2022. <span>“Structured Information Extraction from Complex Scientific Text with Fine-Tuned Large Language Models.”</span> <em>arXiv Preprint arXiv: Arxiv-2212.05238</em>.
+</div>
+<div id="ref-molt5" class="csl-entry" role="doc-biblioentry">
+Edwards, Carl, Tuan Lai, Kevin Ros, Garrett Honke, Kyunghyun Cho, and Heng Ji. 2022. <span>“Translation Between Molecules and Natural Language.”</span> arXiv. <a href="https://doi.org/10.48550/ARXIV.2204.11817">https://doi.org/10.48550/ARXIV.2204.11817</a>.
+</div>
+<div id="ref-Frey_2022" class="csl-entry" role="doc-biblioentry">
+Frey, Nathan, Ryan Soklaski, Simon Axelrod, Siddharth Samsi, Rafael Gomez-Bombarelli, Connor Coley, and Vijay Gadepally. 2022. <span>“Neural Scaling of Deep Chemical Models,”</span> May. <a href="https://doi.org/10.26434/chemrxiv-2022-3s512">https://doi.org/10.26434/chemrxiv-2022-3s512</a>.
+</div>
 <div id="ref-Hocky_2022" class="csl-entry" role="doc-biblioentry">
 Hocky, Glen M., and Andrew D. White. 2022. <span>“Natural Language Processing Models That Automate Programming Will Transform Chemistry Research and Teaching.”</span> <em>Digital Discovery</em> 1 (2): 79–83. <a href="https://doi.org/10.1039/d1dd00009h">https://doi.org/10.1039/d1dd00009h</a>.
+</div>
+<div id="ref-Hu_2023" class="csl-entry" role="doc-biblioentry">
+Hu, Yiwen, and Markus J. Buehler. 2023. <span>“Deep Language Models for Interpretative and Predictive Materials Science.”</span> <em>APL Machine Learning</em> 1 (1): 010901. <a href="https://doi.org/10.1063/5.0134317">https://doi.org/10.1063/5.0134317</a>.
 </div>
 <div id="ref-Jablonka_2022" class="csl-entry" role="doc-biblioentry">
 Jablonka, Kevin Maik, Luc Patiny, and Berend Smit. 2022. <span>“Making the Collective Knowledge of Chemistry Open and Machine Actionable.”</span> <em>Nat. Chem.</em> 14 (4): 365–76. <a href="https://doi.org/10.1038/s41557-022-00910-7">https://doi.org/10.1038/s41557-022-00910-7</a>.

@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+#image: profile.jpg
 about:
   template: jolla
   links:
@@ -9,11 +9,11 @@ about:
       href: https://twitter.com
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/OpenBioML/chemnlp
     - icon: discord
       text: Discord
       href: https://discord.gg/GgDBFP8ZEt
 
 ---
 
-About this blog
+In this website, we will publish regular progress updates of the ChemNLP project under the umbrella of the [OpenBioML collective research laboratory](https://openbioml.org/#mission).

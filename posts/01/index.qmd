@@ -35,12 +35,18 @@ Using the latter, various groups have been training transformers to predict mole
 
 ### LLMs for chemistry
 
-[@Hu_2023]
+Large language models have found widespread use in chemistry. One of the most successful applications has been in the predicting reaction outcomes and retrosynthesis. [@Schwaller_2019]
+Around the same time, a team showed that word embeddings from models trained in unsupervised fashion on abstracts of papers can be used to discover new materials [@Tshitoyan_2019].
+
+<!-- [@Hu_2023]
 
 Schwaller, MolT5, the PubChem article 
-Galactica
+Galactica -->
 
 #### Using models from the GPT-3 family
+
+Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry. 
+
 [@Hocky_2022]
 
 [@Jablonka_2023]
@@ -59,7 +65,7 @@ Inspired by the transformational potential of large language model we aim to cre
 ### Join the discord community and sign up 
 
 The first step to get involved with the community is to join our [Discord server](https://discord.gg/GgDBFP8ZEt), in the ChemNLP channel, we discuss the project. 
-If you want to contribute, you can also sign up on [this Google Sheet]().
+If you want to contribute, you can also sign up on [this Google Sheet](https://docs.google.com/spreadsheets/d/11x7O__rUuntN3F2CuR7Ksd_4UdL7CPyEDm7v_Q0H_B0/edit?usp=sharing).
 
 ### Comment on the proposal 
 
@@ -70,6 +76,16 @@ If you want to get involved in shaping the project, you can comment on the [prop
 If you want to get your hands dirty with collecting and clearning code or writing pipelines, you can find a list of [open issues on GitHub](https://github.com/OpenBioML/chemnlp). Simply comment on the issue you would like to work. If you would like to work on something else, simple create an issue such that we can keep track of all the progress.
 
 In particular, we are currently collecting open source datasets. If you know some datasets, you can add them to our [Awesome List](https://github.com/kjappelbaum/awesome-chemistry-datasets). (Or feel free to improve existing entries.)
+
+For more details, check the contribution guide.
+
+
+## Progress so far 
+
+Already before our first meeting we made some progress:
+
+- we started curating chemistry datasets in our [Awesome List](https://github.com/kjappelbaum/awesome-chemistry-datasets) 
+- we compiled a [dataset from ChemRxiv](https://discord.com/channels/@me/1074955590608113706/1078243138809892915) (thanks to @marianna13)
 
 ## References
 

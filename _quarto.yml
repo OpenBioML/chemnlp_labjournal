@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "chemnlp"
+  title: "ChemNLP"
   navbar:
     right:
       - about.qmd

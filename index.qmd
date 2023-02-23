@@ -1,5 +1,5 @@
 ---
-title: "chemnlp"
+title: "ChemNLP"
 listing:
   contents: posts
   sort: "date desc"
