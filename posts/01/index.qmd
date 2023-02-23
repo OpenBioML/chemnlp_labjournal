@@ -35,8 +35,11 @@ Using the latter, various groups have been training transformers to predict mole
 
 ### LLMs for chemistry
 
-Large language models have found widespread use in chemistry. One of the most successful applications has been in the predicting reaction outcomes and retrosynthesis. [@Schwaller_2019]
+(Large) language models have found widespread use in chemistry. One of the most successful applications has been in the predicting reaction outcomes and retrosynthesis. [@Schwaller_2019]
 Around the same time, a team showed that word embeddings from models trained in unsupervised fashion on abstracts of papers can be used to discover new materials [@Tshitoyan_2019].
+
+In parallel, transformer models have been pretrained for various applications in chemistry in materials science. For instance [@chithrananda2020chemberta] pretrained RoBERTa 77 million compounds from the PubChem database (see also the prior works [@honda2019smiles, @maziarka2020molecule]) and then fine-tuned it for classification tasks from MoleculeNet [@Wu_2018] where they also compared SMILES and SELFIES representation and BPE tokenization vs. a specific Regex-based tokenizer.
+The pretraining was recently scaled up by [@Ross_2022] to 1.1 billion molecules
 
 <!-- [@Hu_2023]
 
