@@ -21,6 +21,7 @@ In this website, we will publish regular progress updates of the ChemNLP project
 
 # Team 
 
+<div style="text-align: left"> 
 We are an open science project and are proud to about the many talented contributors in our community. 
 
 Our work is lead by the core team, which consists of (in alphabetical order):
@@ -32,3 +33,4 @@ Our work is lead by the core team, which consists of (in alphabetical order):
 - Mark Worrall (@maw501, focus in model code)
 - Michael Pieler (@MicPie)
 - Mohamed (@lemo, focus on data)
+</div>

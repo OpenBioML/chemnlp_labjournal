@@ -170,7 +170,11 @@ div.csl-indent {
   <li><a href="#comment-on-the-proposal" id="toc-comment-on-the-proposal" class="nav-link" data-scroll-target="#comment-on-the-proposal">Comment on the proposal</a></li>
   <li><a href="#select-an-issue" id="toc-select-an-issue" class="nav-link" data-scroll-target="#select-an-issue">Select an issue</a></li>
   </ul></li>
-  <li><a href="#progress-so-far" id="toc-progress-so-far" class="nav-link" data-scroll-target="#progress-so-far">Progress so far</a></li>
+  <li><a href="#progress-so-far" id="toc-progress-so-far" class="nav-link" data-scroll-target="#progress-so-far">Progress so far</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -194,6 +198,7 @@ div.csl-indent {
 <p>All the outputs will be open source and freely accessible. Also all the work happens collaboratively, organized via <a href="https://discord.gg/GgDBFP8ZEt">Discord</a> and <a href="https://github.com/OpenBioML/chemnlp">GitHub</a>.</p>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>The review section below is highly biased and not comprehensive. If you think we missed some important work let us know (or make a pull request).</p>
 <section id="machine-learning-in-chemistry" class="level3">
 <h3 class="anchored" data-anchor-id="machine-learning-in-chemistry">Machine learning in chemistry</h3>
 <p>Chemistry is probably one of the most exciting applications for machine learning. Chemistry gives us the tools to create drugs, chemistry can also help to fight climate change. <span class="citation" data-cites="Yao_2022 Tabor_2018">(<a href="#ref-Yao_2022" role="doc-biblioref">Yao et al. 2022</a>; <a href="#ref-Tabor_2018" role="doc-biblioref">Tabor et al. 2018</a>)</span></p>
@@ -212,10 +217,10 @@ Schwaller, MolT5, the PubChem article
 Galactica -->
 <section id="using-models-from-the-gpt-3-family" class="level4">
 <h4 class="anchored" data-anchor-id="using-models-from-the-gpt-3-family">Using models from the GPT-3 family</h4>
-<p>Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry.</p>
+<p><span class="citation" data-cites="Frey_2022">(<a href="#ref-Frey_2022" role="doc-biblioref">Frey et al. 2022</a>)</span> investigated scaling more carefully by analyzing scaling laws of a GPT-Neo model pre-trained with a SELFIES tokenizer on PubChem molecules by predicting the next token. They also use training performance estimation (based on linear regression on a training speed estimation) to speed up hyperparameter optimiztion. The authors also indicated the potential of prompt engineering and downstream use of the embeddings for applications such as information retrieval or unsupervised analysis.</p>
 <p><span class="citation" data-cites="Hocky_2022">(<a href="#ref-Hocky_2022" role="doc-biblioref">Hocky and White 2022</a>)</span></p>
+<!-- Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry.  -->
 <p><span class="citation" data-cites="Jablonka_2023">(<a href="#ref-Jablonka_2023" role="doc-biblioref">Jablonka et al. 2023</a>)</span></p>
-<p><span class="citation" data-cites="Frey_2022">(<a href="#ref-Frey_2022" role="doc-biblioref">Frey et al. 2022</a>)</span></p>
 <p><span class="citation" data-cites="dunn2022structured">(<a href="#ref-dunn2022structured" role="doc-biblioref">Dunn et al. 2022</a>)</span></p>
 </section>
 </section>
@@ -240,10 +245,23 @@ Galactica -->
 <section id="progress-so-far" class="level2">
 <h2 class="anchored" data-anchor-id="progress-so-far">Progress so far</h2>
 <p>Already before our first meeting we made some progress:</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
 <ul>
 <li>we started curating chemistry datasets in our <a href="https://github.com/kjappelbaum/awesome-chemistry-datasets">Awesome List</a></li>
-<li>we compiled a <a href="https://discord.com/channels/@me/1074955590608113706/1078243138809892915">dataset from ChemRxiv</a> (thanks to <span class="citation" data-cites="marianna13">(<a href="#ref-marianna13" role="doc-biblioref"><strong>marianna13?</strong></a>)</span>)</li>
+<li>we compiled a <a href="https://huggingface.co/datasets/marianna13/chemrxiv">dataset from ChemRxiv</a> (thanks to <span class="citation" data-cites="marianna13">(<a href="#ref-marianna13" role="doc-biblioref"><strong>marianna13?</strong></a>)</span>)</li>
+<li>we compiled a <a href="https://huggingface.co/datasets/marianna13/biorxiv">dataset from BioRxiv</a> (thanks to <span class="citation" data-cites="marianna13">(<a href="#ref-marianna13" role="doc-biblioref"><strong>marianna13?</strong></a>)</span>)</li>
+<li>we added multiple datasets from our awesome lists, now also with a slight touch of semantic data (thanks to <span class="citation" data-cites="ml-evs">(<a href="#ref-ml-evs" role="doc-biblioref"><strong>ml-evs?</strong></a>)</span>, <span class="citation" data-cites="phalem">(<a href="#ref-phalem" role="doc-biblioref"><strong>phalem?</strong></a>)</span>, <span class="citation" data-cites="othertea">(<a href="#ref-othertea" role="doc-biblioref"><strong>othertea?</strong></a>)</span>)</li>
 </ul>
+</section>
+<section id="modeling" class="level3">
+<h3 class="anchored" data-anchor-id="modeling">Modeling</h3>
+<p>The project and discussion on this part is also documented on our <a href="https://stable-society.notion.site/ChemNLP-4c9a37df668b470cb9d1de928621a51a">Notion page</a>.</p>
+<ul>
+<li>we started working on the GPTX-Neo codebase and integration of IA^3 (thanks to <span class="citation" data-cites="jackapbutler">(<a href="#ref-jackapbutler" role="doc-biblioref"><strong>jackapbutler?</strong></a>)</span>, <span class="citation" data-cites="maw501">(<a href="#ref-maw501" role="doc-biblioref"><strong>maw501?</strong></a>)</span> )</li>
+<li>we started compiling benchmark datasets and safety evals (thanks to <span class="citation" data-cites="bethanyconnolly">(<a href="#ref-bethanyconnolly" role="doc-biblioref"><strong>bethanyconnolly?</strong></a>)</span>)</li>
+</ul>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
