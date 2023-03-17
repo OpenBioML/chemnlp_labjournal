@@ -19,6 +19,9 @@ All the outputs will be open source and freely accessible. Also all the work hap
 
 ## Background
 
+The review section below is highly biased and not comprehensive.
+If you think we missed some important work let us know (or make a pull request).
+
 ### Machine learning in chemistry 
 
 Chemistry is probably one of the most exciting applications for machine learning. 
@@ -38,8 +41,8 @@ Using the latter, various groups have been training transformers to predict mole
 (Large) language models have found widespread use in chemistry. One of the most successful applications has been in the predicting reaction outcomes and retrosynthesis. [@Schwaller_2019]
 Around the same time, a team showed that word embeddings from models trained in unsupervised fashion on abstracts of papers can be used to discover new materials [@Tshitoyan_2019].
 
-In parallel, transformer models have been pretrained for various applications in chemistry in materials science. For instance [@chithrananda2020chemberta] pretrained RoBERTa 77 million compounds from the PubChem database (see also the prior works [@honda2019smiles, @maziarka2020molecule]) and then fine-tuned it for classification tasks from MoleculeNet [@Wu_2018] where they also compared SMILES and SELFIES representation and BPE tokenization vs. a specific Regex-based tokenizer.
-The pretraining was recently scaled up by [@Ross_2022] to 1.1 billion molecules
+In parallel, transformer models have been pretrained for various applications in chemistry in materials science. For instance [@chithrananda2020chemberta] pretrained RoBERTa 77 million compounds from the PubChem database (see also the prior works [@honda2019smiles; @maziarka2020molecule]) and then fine-tuned it for classification tasks from MoleculeNet [@Wu_2018] where they also compared SMILES and SELFIES representation and BPE tokenization vs. a specific Regex-based tokenizer.
+The pretraining was recently scaled up by [@Ross_2022] (using masked language modeling) to 1.1 billion molecules (Molformer), who found that the fine-tuned model could outperform GNNs on some benchmark tasks.
 
 <!-- [@Hu_2023]
 
@@ -48,20 +51,17 @@ Galactica -->
 
 #### Using models from the GPT-3 family
 
-Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry. 
+[@Frey_2022] investigated scaling more carefully by analyzing scaling laws of a GPT-Neo model pre-trained with a SELFIES tokenizer on PubChem molecules by predicting the next token. They also use training performance estimation (based on linear regression on a training speed estimation) to speed up hyperparameter optimiztion. The authors also indicated the potential of prompt engineering and downstream use of the embeddings for applications such as information retrieval or unsupervised analysis. 
 
-[@Hocky_2022]
+[@Hocky_2022] 
+
+<!-- Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry.  -->
+
+
 
 [@Jablonka_2023]
 
-[@Frey_2022]
-
 [@dunn2022structured]
-
-## The ChemNLP project
-
-Inspired by the transformational potential of large language model we aim to create a massive chemistry dataset to then train a foundational model focussed on applications in chemistry. 
-
 
 ## Getting involved
 
@@ -87,10 +87,24 @@ For more details, check the contribution guide.
 
 Already before our first meeting we made some progress:
 
+
+### Data 
 - we started curating chemistry datasets in our [Awesome List](https://github.com/kjappelbaum/awesome-chemistry-datasets) 
-- we compiled a [dataset from ChemRxiv](https://discord.com/channels/@me/1074955590608113706/1078243138809892915) (thanks to @marianna13)
+- we compiled a [dataset from ChemRxiv](https://huggingface.co/datasets/marianna13/chemrxiv) (thanks to @marianna13)
+- we compiled a [dataset from BioRxiv](https://huggingface.co/datasets/marianna13/biorxiv) (thanks to @marianna13)
+- we added multiple datasets from our awesome lists, now also with a slight touch of semantic data (thanks to @ml-evs, @phalem, @othertea)
+
+
+### Modeling
+
+The project and discussion on this part is also documented on our [Notion page](https://stable-society.notion.site/ChemNLP-4c9a37df668b470cb9d1de928621a51a).
+
+- we started working on the GPTX-Neo codebase and integration of IA^3 (thanks to @jackapbutler, @maw501 )
+- we started compiling benchmark datasets and safety evals (thanks to @bethanyconnolly)
 
 ## References
 
 ::: {#refs}
 :::
+
+

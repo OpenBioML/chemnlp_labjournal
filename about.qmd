@@ -17,3 +17,18 @@ about:
 ---
 
 In this website, we will publish regular progress updates of the ChemNLP project under the umbrella of the [OpenBioML collective research laboratory](https://openbioml.org/#mission).
+
+
+# Team 
+
+We are an open science project and are proud to about the many talented contributors in our community. 
+
+Our work is lead by the core team, which consists of (in alphabetical order):
+
+- Andrew White (@whitead)
+- Beth Connolly (@bethanyconnolly, focus on benchmarking)
+- Jack Butler (@jackapbutler, focus on model code) 
+- Kevin Maik Jablonka (@kjappelbaum, focus on data and benchmarking)
+- Mark Worrall (@maw501, focus in model code)
+- Michael Pieler (@MicPie)
+- Mohamed (@lemo, focus on data)
