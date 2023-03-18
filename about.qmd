@@ -33,4 +33,7 @@ Our work is lead by the core team, which consists of (in alphabetical order):
 - Mark Worrall (@maw501, focus in model code)
 - Michael Pieler (@MicPie)
 - Mohamed (@lemo, focus on data)
+
+Reach out to us if you have questions about any of the work packages.
 </div>
+

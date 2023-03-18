@@ -44,10 +44,6 @@ Around the same time, a team showed that word embeddings from models trained in 
 In parallel, transformer models have been pretrained for various applications in chemistry in materials science. For instance [@chithrananda2020chemberta] pretrained RoBERTa 77 million compounds from the PubChem database (see also the prior works [@honda2019smiles; @maziarka2020molecule]) and then fine-tuned it for classification tasks from MoleculeNet [@Wu_2018] where they also compared SMILES and SELFIES representation and BPE tokenization vs. a specific Regex-based tokenizer.
 The pretraining was recently scaled up by [@Ross_2022] (using masked language modeling) to 1.1 billion molecules (Molformer), who found that the fine-tuned model could outperform GNNs on some benchmark tasks.
 
-<!-- [@Hu_2023]
-
-Schwaller, MolT5, the PubChem article 
-Galactica -->
 
 #### Using models from the GPT-3 family
 
@@ -57,11 +53,14 @@ Galactica -->
 
 <!-- Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry.  -->
 
+<!-- [@Jablonka_2023]
+
+[@dunn2022structured] -->
 
 
-[@Jablonka_2023]
+In late 2022 Meta (and Papers With Code) released [@galactica], a LLM trained mostly on papers. Interesingly, they also utilized different token(izers) for differetn modalities, for example, citations, protein sequences, and SMILES. They also filtered Common Crawl to scientific subsets. One relevant conclusion for the SMILES-to-IUPAC-name task was
 
-[@dunn2022structured]
+>Accuracy increases smoothly with scale. Given we restricted the corpus to 2 million molecules, it is likely much better performance is achievable through training or fine-tuning on more molecules. The model is freely available for those who want to perform this follow-up work
 
 ## Getting involved
 
