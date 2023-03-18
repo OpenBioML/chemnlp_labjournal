@@ -1,0 +1,109 @@
+---
+title: "Welcome and background"
+author: "Kevin M Jablonka, Michael Piechler, Andrew White"
+date: "2023-02-15"
+categories: [news]
+bibliography: references.bib
+---
+
+This is the first post of the ChemNLP project under the umbrella of the [OpenBioML collective research laboratory](https://openbioml.org/#mission).
+
+Our aim is to (1) create a massive chemistry dataset and (2) train a large language model (LLM) on this dataset for downstream applications that include 
+
+- prediction of properties of materials 
+- conditional generation of molecules 
+- information extraction
+
+All the outputs will be open source and freely accessible. Also all the work happens collaboratively, organized via [Discord](https://discord.gg/GgDBFP8ZEt) and [GitHub](https://github.com/OpenBioML/chemnlp).
+
+
+## Background
+
+The review section below is highly biased and not comprehensive.
+If you think we missed some important work let us know (or make a pull request).
+
+### Machine learning in chemistry 
+
+Chemistry is probably one of the most exciting applications for machine learning. 
+Chemistry gives us the tools to create drugs, chemistry can also help to fight climate change. [@Yao_2022; @Tabor_2018]
+
+However, chemists are also spoiled for choice. [@Walsh_2015] There are too many things chemists could try and many experiments are costly (or even involve experiments).
+Any tool we could use to speed up the design of chemical compounds would hence be of tremendous value.
+
+Interestingly, chemistry also creates a lot of data - but most of the data is currently unused (or hidden in journal articles or lab notebooks). [@Jablonka_2022]
+
+Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations ("linearizations" of the molecule graph) such as SMILES and SELFIES.  [@Krenn_2022]
+
+Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representations, [@molt5] or to even directly create molecules with desired properties. 
+
+### LLMs for chemistry
+
+(Large) language models have found widespread use in chemistry. One of the most successful applications has been in the predicting reaction outcomes and retrosynthesis. [@Schwaller_2019]
+Around the same time, a team showed that word embeddings from models trained in unsupervised fashion on abstracts of papers can be used to discover new materials [@Tshitoyan_2019].
+
+In parallel, transformer models have been pretrained for various applications in chemistry in materials science. For instance [@chithrananda2020chemberta] pretrained RoBERTa 77 million compounds from the PubChem database (see also the prior works [@honda2019smiles; @maziarka2020molecule]) and then fine-tuned it for classification tasks from MoleculeNet [@Wu_2018] where they also compared SMILES and SELFIES representation and BPE tokenization vs. a specific Regex-based tokenizer.
+The pretraining was recently scaled up by [@Ross_2022] (using masked language modeling) to 1.1 billion molecules (Molformer), who found that the fine-tuned model could outperform GNNs on some benchmark tasks.
+
+
+#### Using models from the GPT-3 family
+
+[@Frey_2022] investigated scaling more carefully by analyzing scaling laws of a GPT-Neo model pre-trained with a SELFIES tokenizer on PubChem molecules by predicting the next token. They also use training performance estimation (based on linear regression on a training speed estimation) to speed up hyperparameter optimiztion. The authors also indicated the potential of prompt engineering and downstream use of the embeddings for applications such as information retrieval or unsupervised analysis. 
+
+[@Hocky_2022] 
+
+<!-- Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry.  -->
+
+<!-- [@Jablonka_2023]
+
+[@dunn2022structured] -->
+
+
+In late 2022 Meta (and Papers With Code) released [@galactica], a LLM trained mostly on papers. Interesingly, they also utilized different token(izers) for differetn modalities, for example, citations, protein sequences, and SMILES. They also filtered Common Crawl to scientific subsets. One relevant conclusion for the SMILES-to-IUPAC-name task was
+
+>Accuracy increases smoothly with scale. Given we restricted the corpus to 2 million molecules, it is likely much better performance is achievable through training or fine-tuning on more molecules. The model is freely available for those who want to perform this follow-up work
+
+## Getting involved
+
+### Join the discord community and sign up 
+
+The first step to get involved with the community is to join our [Discord server](https://discord.gg/GgDBFP8ZEt), in the ChemNLP channel, we discuss the project. 
+If you want to contribute, you can also sign up on [this Google Sheet](https://docs.google.com/spreadsheets/d/11x7O__rUuntN3F2CuR7Ksd_4UdL7CPyEDm7v_Q0H_B0/edit?usp=sharing).
+
+### Comment on the proposal 
+
+If you want to get involved in shaping the project, you can comment on the [proposal draft](https://docs.google.com/document/d/1C44EKSJRojm39P2CaxnEq-0FGwDRaknKxJ8lZI6xr5M/edit?usp=sharing).
+
+### Select an issue 
+
+If you want to get your hands dirty with collecting and clearning code or writing pipelines, you can find a list of [open issues on GitHub](https://github.com/OpenBioML/chemnlp). Simply comment on the issue you would like to work. If you would like to work on something else, simple create an issue such that we can keep track of all the progress.
+
+In particular, we are currently collecting open source datasets. If you know some datasets, you can add them to our [Awesome List](https://github.com/kjappelbaum/awesome-chemistry-datasets). (Or feel free to improve existing entries.)
+
+For more details, check the contribution guide.
+
+
+## Progress so far 
+
+Already before our first meeting we made some progress:
+
+
+### Data 
+- we started curating chemistry datasets in our [Awesome List](https://github.com/kjappelbaum/awesome-chemistry-datasets) 
+- we compiled a [dataset from ChemRxiv](https://huggingface.co/datasets/marianna13/chemrxiv) (thanks to @marianna13)
+- we compiled a [dataset from BioRxiv](https://huggingface.co/datasets/marianna13/biorxiv) (thanks to @marianna13)
+- we added multiple datasets from our awesome lists, now also with a slight touch of semantic data (thanks to @ml-evs, @phalem, @othertea)
+
+
+### Modeling
+
+The project and discussion on this part is also documented on our [Notion page](https://stable-society.notion.site/ChemNLP-4c9a37df668b470cb9d1de928621a51a).
+
+- we started working on the GPTX-Neo codebase and integration of IA^3 (thanks to @jackapbutler, @maw501 )
+- we started compiling benchmark datasets and safety evals (thanks to @bethanyconnolly)
+
+## References
+
+::: {#refs}
+:::
+
+

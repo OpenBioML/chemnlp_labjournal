@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kevin M Jablonka, Michael Piechler, Andrew White">
+<meta name="dcterms.date" content="2023-02-15">
+
+<title>ChemNLP - Welcome and background</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ChemNLP</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Welcome and background</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kevin M Jablonka, Michael Piechler, Andrew White </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 15, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a>
+  <ul class="collapse">
+  <li><a href="#machine-learning-in-chemistry" id="toc-machine-learning-in-chemistry" class="nav-link" data-scroll-target="#machine-learning-in-chemistry">Machine learning in chemistry</a></li>
+  <li><a href="#llms-for-chemistry" id="toc-llms-for-chemistry" class="nav-link" data-scroll-target="#llms-for-chemistry">LLMs for chemistry</a></li>
+  </ul></li>
+  <li><a href="#getting-involved" id="toc-getting-involved" class="nav-link" data-scroll-target="#getting-involved">Getting involved</a>
+  <ul class="collapse">
+  <li><a href="#join-the-discord-community-and-sign-up" id="toc-join-the-discord-community-and-sign-up" class="nav-link" data-scroll-target="#join-the-discord-community-and-sign-up">Join the discord community and sign up</a></li>
+  <li><a href="#comment-on-the-proposal" id="toc-comment-on-the-proposal" class="nav-link" data-scroll-target="#comment-on-the-proposal">Comment on the proposal</a></li>
+  <li><a href="#select-an-issue" id="toc-select-an-issue" class="nav-link" data-scroll-target="#select-an-issue">Select an issue</a></li>
+  </ul></li>
+  <li><a href="#progress-so-far" id="toc-progress-so-far" class="nav-link" data-scroll-target="#progress-so-far">Progress so far</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>This is the first post of the ChemNLP project under the umbrella of the <a href="https://openbioml.org/#mission">OpenBioML collective research laboratory</a>.</p>
+<p>Our aim is to (1) create a massive chemistry dataset and (2) train a large language model (LLM) on this dataset for downstream applications that include</p>
+<ul>
+<li>prediction of properties of materials</li>
+<li>conditional generation of molecules</li>
+<li>information extraction</li>
+</ul>
+<p>All the outputs will be open source and freely accessible. Also all the work happens collaboratively, organized via <a href="https://discord.gg/GgDBFP8ZEt">Discord</a> and <a href="https://github.com/OpenBioML/chemnlp">GitHub</a>.</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>The review section below is highly biased and not comprehensive. If you think we missed some important work let us know (or make a pull request).</p>
+<section id="machine-learning-in-chemistry" class="level3">
+<h3 class="anchored" data-anchor-id="machine-learning-in-chemistry">Machine learning in chemistry</h3>
+<p>Chemistry is probably one of the most exciting applications for machine learning. Chemistry gives us the tools to create drugs, chemistry can also help to fight climate change. <span class="citation" data-cites="Yao_2022 Tabor_2018">(<a href="#ref-Yao_2022" role="doc-biblioref">Yao et al. 2022</a>; <a href="#ref-Tabor_2018" role="doc-biblioref">Tabor et al. 2018</a>)</span></p>
+<p>However, chemists are also spoiled for choice. <span class="citation" data-cites="Walsh_2015">(<a href="#ref-Walsh_2015" role="doc-biblioref">Walsh 2015</a>)</span> There are too many things chemists could try and many experiments are costly (or even involve experiments). Any tool we could use to speed up the design of chemical compounds would hence be of tremendous value.</p>
+<p>Interestingly, chemistry also creates a lot of data - but most of the data is currently unused (or hidden in journal articles or lab notebooks). <span class="citation" data-cites="Jablonka_2022">(<a href="#ref-Jablonka_2022" role="doc-biblioref">Jablonka, Patiny, and Smit 2022</a>)</span></p>
+<p>Using the data that has been curated, various models have been built, often with pre-computed features (resulting in tabular datasets that are often consumed with models such as XGBoost), graph neural networks, or so-called line-representations (“linearizations” of the molecule graph) such as SMILES and SELFIES. <span class="citation" data-cites="Krenn_2022">(<a href="#ref-Krenn_2022" role="doc-biblioref">Krenn et al. 2022</a>)</span></p>
+<p>Using the latter, various groups have been training transformers to predict molecular properties, convert between molecular representations, <span class="citation" data-cites="molt5">(<a href="#ref-molt5" role="doc-biblioref">Edwards et al. 2022</a>)</span> or to even directly create molecules with desired properties.</p>
+</section>
+<section id="llms-for-chemistry" class="level3">
+<h3 class="anchored" data-anchor-id="llms-for-chemistry">LLMs for chemistry</h3>
+<p>(Large) language models have found widespread use in chemistry. One of the most successful applications has been in the predicting reaction outcomes and retrosynthesis. <span class="citation" data-cites="Schwaller_2019">(<a href="#ref-Schwaller_2019" role="doc-biblioref">Schwaller et al. 2019</a>)</span> Around the same time, a team showed that word embeddings from models trained in unsupervised fashion on abstracts of papers can be used to discover new materials <span class="citation" data-cites="Tshitoyan_2019">(<a href="#ref-Tshitoyan_2019" role="doc-biblioref">Tshitoyan et al. 2019</a>)</span>.</p>
+<p>In parallel, transformer models have been pretrained for various applications in chemistry in materials science. For instance <span class="citation" data-cites="chithrananda2020chemberta">(<a href="#ref-chithrananda2020chemberta" role="doc-biblioref">Chithrananda, Grand, and Ramsundar 2020</a>)</span> pretrained RoBERTa 77 million compounds from the PubChem database (see also the prior works <span class="citation" data-cites="honda2019smiles maziarka2020molecule">(<a href="#ref-honda2019smiles" role="doc-biblioref">Honda, Shi, and Ueda 2019</a>; <a href="#ref-maziarka2020molecule" role="doc-biblioref">Maziarka et al. 2020</a>)</span>) and then fine-tuned it for classification tasks from MoleculeNet <span class="citation" data-cites="Wu_2018">(<a href="#ref-Wu_2018" role="doc-biblioref">Wu et al. 2018</a>)</span> where they also compared SMILES and SELFIES representation and BPE tokenization vs.&nbsp;a specific Regex-based tokenizer. The pretraining was recently scaled up by <span class="citation" data-cites="Ross_2022">(<a href="#ref-Ross_2022" role="doc-biblioref">Ross et al. 2022</a>)</span> (using masked language modeling) to 1.1 billion molecules (Molformer), who found that the fine-tuned model could outperform GNNs on some benchmark tasks.</p>
+<!-- [@Hu_2023]
+
+Schwaller, MolT5, the PubChem article 
+Galactica -->
+<section id="using-models-from-the-gpt-3-family" class="level4">
+<h4 class="anchored" data-anchor-id="using-models-from-the-gpt-3-family">Using models from the GPT-3 family</h4>
+<p><span class="citation" data-cites="Frey_2022">(<a href="#ref-Frey_2022" role="doc-biblioref">Frey et al. 2022</a>)</span> investigated scaling more carefully by analyzing scaling laws of a GPT-Neo model pre-trained with a SELFIES tokenizer on PubChem molecules by predicting the next token. They also use training performance estimation (based on linear regression on a training speed estimation) to speed up hyperparameter optimiztion. The authors also indicated the potential of prompt engineering and downstream use of the embeddings for applications such as information retrieval or unsupervised analysis.</p>
+<p><span class="citation" data-cites="Hocky_2022">(<a href="#ref-Hocky_2022" role="doc-biblioref">Hocky and White 2022</a>)</span></p>
+<!-- Very recently, there has been a lot of interest in directly using pretrained models such as the ones from the GPT-3 for applications in chemistry.  -->
+<p><span class="citation" data-cites="Jablonka_2023">(<a href="#ref-Jablonka_2023" role="doc-biblioref">Jablonka et al. 2023</a>)</span></p>
+<p><span class="citation" data-cites="dunn2022structured">(<a href="#ref-dunn2022structured" role="doc-biblioref">Dunn et al. 2022</a>)</span></p>
+</section>
+</section>
+</section>
+<section id="getting-involved" class="level2">
+<h2 class="anchored" data-anchor-id="getting-involved">Getting involved</h2>
+<section id="join-the-discord-community-and-sign-up" class="level3">
+<h3 class="anchored" data-anchor-id="join-the-discord-community-and-sign-up">Join the discord community and sign up</h3>
+<p>The first step to get involved with the community is to join our <a href="https://discord.gg/GgDBFP8ZEt">Discord server</a>, in the ChemNLP channel, we discuss the project. If you want to contribute, you can also sign up on <a href="https://docs.google.com/spreadsheets/d/11x7O__rUuntN3F2CuR7Ksd_4UdL7CPyEDm7v_Q0H_B0/edit?usp=sharing">this Google Sheet</a>.</p>
+</section>
+<section id="comment-on-the-proposal" class="level3">
+<h3 class="anchored" data-anchor-id="comment-on-the-proposal">Comment on the proposal</h3>
+<p>If you want to get involved in shaping the project, you can comment on the <a href="https://docs.google.com/document/d/1C44EKSJRojm39P2CaxnEq-0FGwDRaknKxJ8lZI6xr5M/edit?usp=sharing">proposal draft</a>.</p>
+</section>
+<section id="select-an-issue" class="level3">
+<h3 class="anchored" data-anchor-id="select-an-issue">Select an issue</h3>
+<p>If you want to get your hands dirty with collecting and clearning code or writing pipelines, you can find a list of <a href="https://github.com/OpenBioML/chemnlp">open issues on GitHub</a>. Simply comment on the issue you would like to work. If you would like to work on something else, simple create an issue such that we can keep track of all the progress.</p>
+<p>In particular, we are currently collecting open source datasets. If you know some datasets, you can add them to our <a href="https://github.com/kjappelbaum/awesome-chemistry-datasets">Awesome List</a>. (Or feel free to improve existing entries.)</p>
+<p>For more details, check the contribution guide.</p>
+</section>
+</section>
+<section id="progress-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="progress-so-far">Progress so far</h2>
+<p>Already before our first meeting we made some progress:</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<ul>
+<li>we started curating chemistry datasets in our <a href="https://github.com/kjappelbaum/awesome-chemistry-datasets">Awesome List</a></li>
+<li>we compiled a <a href="https://huggingface.co/datasets/marianna13/chemrxiv">dataset from ChemRxiv</a> (thanks to <span class="citation" data-cites="marianna13">(<a href="#ref-marianna13" role="doc-biblioref"><strong>marianna13?</strong></a>)</span>)</li>
+<li>we compiled a <a href="https://huggingface.co/datasets/marianna13/biorxiv">dataset from BioRxiv</a> (thanks to <span class="citation" data-cites="marianna13">(<a href="#ref-marianna13" role="doc-biblioref"><strong>marianna13?</strong></a>)</span>)</li>
+<li>we added multiple datasets from our awesome lists, now also with a slight touch of semantic data (thanks to <span class="citation" data-cites="ml-evs">(<a href="#ref-ml-evs" role="doc-biblioref"><strong>ml-evs?</strong></a>)</span>, <span class="citation" data-cites="phalem">(<a href="#ref-phalem" role="doc-biblioref"><strong>phalem?</strong></a>)</span>, <span class="citation" data-cites="othertea">(<a href="#ref-othertea" role="doc-biblioref"><strong>othertea?</strong></a>)</span>)</li>
+</ul>
+</section>
+<section id="modeling" class="level3">
+<h3 class="anchored" data-anchor-id="modeling">Modeling</h3>
+<p>The project and discussion on this part is also documented on our <a href="https://stable-society.notion.site/ChemNLP-4c9a37df668b470cb9d1de928621a51a">Notion page</a>.</p>
+<ul>
+<li>we started working on the GPTX-Neo codebase and integration of IA^3 (thanks to <span class="citation" data-cites="jackapbutler">(<a href="#ref-jackapbutler" role="doc-biblioref"><strong>jackapbutler?</strong></a>)</span>, <span class="citation" data-cites="maw501">(<a href="#ref-maw501" role="doc-biblioref"><strong>maw501?</strong></a>)</span> )</li>
+<li>we started compiling benchmark datasets and safety evals (thanks to <span class="citation" data-cites="bethanyconnolly">(<a href="#ref-bethanyconnolly" role="doc-biblioref"><strong>bethanyconnolly?</strong></a>)</span>)</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-chithrananda2020chemberta" class="csl-entry" role="doc-biblioentry">
+Chithrananda, Seyone, Gabriel Grand, and Bharath Ramsundar. 2020. <span>“ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property Prediction.”</span> <em>arXiv Preprint arXiv: Arxiv-2010.09885</em>.
+</div>
+<div id="ref-dunn2022structured" class="csl-entry" role="doc-biblioentry">
+Dunn, Alexander, John Dagdelen, Nicholas Walker, Sanghoon Lee, Andrew S. Rosen, Gerbrand Ceder, Kristin Persson, and Anubhav Jain. 2022. <span>“Structured Information Extraction from Complex Scientific Text with Fine-Tuned Large Language Models.”</span> <em>arXiv Preprint arXiv: Arxiv-2212.05238</em>.
+</div>
+<div id="ref-molt5" class="csl-entry" role="doc-biblioentry">
+Edwards, Carl, Tuan Lai, Kevin Ros, Garrett Honke, Kyunghyun Cho, and Heng Ji. 2022. <span>“Translation Between Molecules and Natural Language.”</span> arXiv. <a href="https://doi.org/10.48550/ARXIV.2204.11817">https://doi.org/10.48550/ARXIV.2204.11817</a>.
+</div>
+<div id="ref-Frey_2022" class="csl-entry" role="doc-biblioentry">
+Frey, Nathan, Ryan Soklaski, Simon Axelrod, Siddharth Samsi, Rafael Gomez-Bombarelli, Connor Coley, and Vijay Gadepally. 2022. <span>“Neural Scaling of Deep Chemical Models,”</span> May. <a href="https://doi.org/10.26434/chemrxiv-2022-3s512">https://doi.org/10.26434/chemrxiv-2022-3s512</a>.
+</div>
+<div id="ref-Hocky_2022" class="csl-entry" role="doc-biblioentry">
+Hocky, Glen M., and Andrew D. White. 2022. <span>“Natural Language Processing Models That Automate Programming Will Transform Chemistry Research and Teaching.”</span> <em>Digital Discovery</em> 1 (2): 79–83. <a href="https://doi.org/10.1039/d1dd00009h">https://doi.org/10.1039/d1dd00009h</a>.
+</div>
+<div id="ref-honda2019smiles" class="csl-entry" role="doc-biblioentry">
+Honda, Shion, Shoi Shi, and Hiroki R. Ueda. 2019. <span>“SMILES Transformer: Pre-Trained Molecular Fingerprint for Low Data Drug Discovery.”</span> <em>arXiv Preprint arXiv: Arxiv-1911.04738</em>.
+</div>
+<div id="ref-Jablonka_2022" class="csl-entry" role="doc-biblioentry">
+Jablonka, Kevin Maik, Luc Patiny, and Berend Smit. 2022. <span>“Making the Collective Knowledge of Chemistry Open and Machine Actionable.”</span> <em>Nat. Chem.</em> 14 (4): 365–76. <a href="https://doi.org/10.1038/s41557-022-00910-7">https://doi.org/10.1038/s41557-022-00910-7</a>.
+</div>
+<div id="ref-Jablonka_2023" class="csl-entry" role="doc-biblioentry">
+Jablonka, Kevin Maik, Philippe Schwaller, Andres Ortega-Guerrero, and Berend Smit. 2023. <span>“Is <span>GPT</span>-3 All You Need for Low-Data Discovery in Chemistry?”</span> February. <a href="https://doi.org/10.26434/chemrxiv-2023-fw8n4">https://doi.org/10.26434/chemrxiv-2023-fw8n4</a>.
+</div>
+<div id="ref-Krenn_2022" class="csl-entry" role="doc-biblioentry">
+Krenn, Mario, Qianxiang Ai, Senja Barthel, Nessa Carson, Angelo Frei, Nathan C. Frey, Pascal Friederich, et al. 2022. <span>“<span>SELFIES</span> and the Future of Molecular String Representations.”</span> <em>Patterns</em> 3 (10): 100588. <a href="https://doi.org/10.1016/j.patter.2022.100588">https://doi.org/10.1016/j.patter.2022.100588</a>.
+</div>
+<div id="ref-maziarka2020molecule" class="csl-entry" role="doc-biblioentry">
+Maziarka, Łukasz, Tomasz Danel, Sławomir Mucha, Krzysztof Rataj, Jacek Tabor, and Stanisław Jastrzębski. 2020. <span>“Molecule Attention Transformer.”</span> <em>arXiv Preprint arXiv: Arxiv-2002.08264</em>.
+</div>
+<div id="ref-Ross_2022" class="csl-entry" role="doc-biblioentry">
+Ross, Jerret, Brian Belgodere, Vijil Chenthamarakshan, Inkit Padhi, Youssef Mroueh, and Payel Das. 2022. <span>“Large-Scale Chemical Language Representations Capture Molecular Structure and Properties.”</span> <em>Nat Mach Intell</em> 4 (12): 1256–64. <a href="https://doi.org/10.1038/s42256-022-00580-7">https://doi.org/10.1038/s42256-022-00580-7</a>.
+</div>
+<div id="ref-Schwaller_2019" class="csl-entry" role="doc-biblioentry">
+Schwaller, Philippe, Teodoro Laino, Théophile Gaudin, Peter Bolgar, Christopher A. Hunter, Costas Bekas, and Alpha A. Lee. 2019. <span>“Molecular Transformer: A Model for Uncertainty-Calibrated Chemical Reaction Prediction.”</span> <em>ACS Cent. Sci. Central Science</em> 5 (9): 1572–83. <a href="https://doi.org/10.1021/acscentsci.9b00576">https://doi.org/10.1021/acscentsci.9b00576</a>.
+</div>
+<div id="ref-Tabor_2018" class="csl-entry" role="doc-biblioentry">
+Tabor, Daniel P., Loïc M. Roch, Semion K. Saikin, Christoph Kreisbeck, Dennis Sheberla, Joseph H. Montoya, Shyam Dwaraknath, et al. 2018. <span>“Accelerating the Discovery of Materials for Clean Energy in the Era of Smart Automation.”</span> <em>Nat Rev Mater</em> 3 (5): 5–20. <a href="https://doi.org/10.1038/s41578-018-0005-z">https://doi.org/10.1038/s41578-018-0005-z</a>.
+</div>
+<div id="ref-Tshitoyan_2019" class="csl-entry" role="doc-biblioentry">
+Tshitoyan, Vahe, John Dagdelen, Leigh Weston, Alexander Dunn, Ziqin Rong, Olga Kononova, Kristin A. Persson, Gerbrand Ceder, and Anubhav Jain. 2019. <span>“Unsupervised Word Embeddings Capture Latent Knowledge from Materials Science Literature.”</span> <em>Nature</em> 571 (7763): 95–98. <a href="https://doi.org/10.1038/s41586-019-1335-8">https://doi.org/10.1038/s41586-019-1335-8</a>.
+</div>
+<div id="ref-Walsh_2015" class="csl-entry" role="doc-biblioentry">
+Walsh, Aron. 2015. <span>“The Quest for New Functionality.”</span> <em>Nature Chem</em> 7 (4): 274–75. <a href="https://doi.org/10.1038/nchem.2213">https://doi.org/10.1038/nchem.2213</a>.
+</div>
+<div id="ref-Wu_2018" class="csl-entry" role="doc-biblioentry">
+Wu, Zhenqin, Bharath Ramsundar, Evan N. Feinberg, Joseph Gomes, Caleb Geniesse, Aneesh S. Pappu, Karl Leswing, and Vijay Pande. 2018. <span>“<span>MoleculeNet</span>: A Benchmark for Molecular Machine Learning.”</span> <em>Chem. Sci.</em> 9 (2): 513–30. <a href="https://doi.org/10.1039/c7sc02664a">https://doi.org/10.1039/c7sc02664a</a>.
+</div>
+<div id="ref-Yao_2022" class="csl-entry" role="doc-biblioentry">
+Yao, Zhenpeng, Yanwei Lum, Andrew Johnston, Luis Martin Mejia-Mendoza, Xin Zhou, Yonggang Wen, Alán Aspuru-Guzik, Edward H. Sargent, and Zhi Wei Seh. 2022. <span>“Machine Learning for a Sustainable Energy Future.”</span> <em>Nat Rev Mater</em>, October. <a href="https://doi.org/10.1038/s41578-022-00490-5">https://doi.org/10.1038/s41578-022-00490-5</a>.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="openbioml/chemnlp-blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

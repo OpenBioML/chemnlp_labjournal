@@ -1,0 +1,17 @@
+/* css styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Chivo");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono");
+
+.navbar-brand {
+  font-family: "Fira Mono";
+}
+
+.navbar a:hover {
+  color: #ff6700;
+}
+
+.quarto-listing-category {
+  font-family: "Fira Mono";
+}
